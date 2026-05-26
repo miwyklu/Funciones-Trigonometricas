@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Integrales Definitivas Manuel</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Librerías externas para procesamiento matemático y gráficos -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.8.0/math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="calculator-container">
+        <h2>Calculadora de Integrales Definitivas</h2>
+        <p class="subtitle">Aproximación numérica mediante la Regla de Simpson</p>
+        
+        <div class="grid-layout">
+            <!-- Panel de Controles -->
+            <div class="control-panel">
+                <div class="input-group">
+                    <label for="function-input">Función $f(x)$:</label>
+                    <input type="text" id="function-input" value="x^2" placeholder="ej. x^2, sin(x), exp(x)">
+                </div>
+
+                <div class="row">
+                    <div class="input-group">
+                        <label for="limit-a">Límite Inferior ($a$):</label>
+                        <input type="number" id="limit-a" value="0" step="0.1">
+                    </div>
+                    <div class="input-group">
+                        <label for="limit-b">Límite Superior ($b$):</label>
+                        <input type="number" id="limit-b" value="2" step="0.1">
+                    </div>
+                </div>
+
+                <button id="calculate-btn">Calcular e Ilustrar</button>
+
+                <div class="result-box">
+                    <h3>Resultado:</h3>
+                    <div id="result-value">$\int_{a}^{b} f(x) \, dx = 2.6667$</div>
+                </div>
+            </div>
+
+            <!-- Panel de la Gráfica -->
+            <div class="chart-panel">
+                <canvas id="integralChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

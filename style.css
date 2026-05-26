@@ -1,0 +1,125 @@
+/* Estilos base con enfoque limpio y profesional */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #27F59C;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.calculator-container {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    padding: 30px;
+    max-width: 950px;
+    width: 100%;
+}
+
+h2 {
+    margin-top: 0;
+    color: #1a365d;
+    text-align: center;
+}
+
+.subtitle {
+    text-align: center;
+    color: #718096;
+    margin-bottom: 25px;
+}
+
+.grid-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 30px;
+}
+
+@media (max-width: 768px) {
+    .grid-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+.control-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #4a5568;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1.5px solid #cbd5e0;
+    border-radius: 6px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+input:focus {
+    outline: none;
+    border-color: #3182ce;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+button {
+    background-color: #3182ce;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #2b6cb0;
+}
+
+.result-box {
+    margin-top: 25px;
+    padding: 15px;
+    background-color: #ebf8ff;
+    border-left: 4px solid #3182ce;
+    border-radius: 4px;
+}
+
+.result-box h3 {
+    margin: 0 0 5px 0;
+    font-size: 14px;
+    color: #2c5282;
+    text-transform: uppercase;
+}
+
+#result-value {
+    font-size: 20px;
+    font-weight: bold;
+    color: #2b6cb0;
+}
+
+.chart-panel {
+    position: relative;
+    min-height: 300px;
+}
